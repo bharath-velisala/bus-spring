@@ -26,7 +26,7 @@ pipeline{
 
         stage('sonar analysis'){
             steps{
-                withSonarQubeEnv('sonar'){
+                withSonarQubeEnv('sonarQube'){
                     withMaven(maven:'maven'){
                         sh 'mvn sonar:sonar'
                     }
